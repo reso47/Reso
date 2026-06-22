@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reso | Mods installieren & mehr</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background: #0f0f13;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Obere weiße Leiste */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #ffffff;
+            padding: 16px 30px;
+            text-align: right;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            z-index: 999;
+        }
+        nav a {
+            color: #000000;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 1.05rem;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+        nav a:hover {
+            background: #000000;
+            color: #ffffff;
+        }
+
+        /* Startbereich – sehr lang gemacht */
+        .start {
+            min-height: 300vh; /* Noch viel länger */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: center;
+            background: radial-gradient(circle at center, #1a1a22 0%, #0f0f13 70%);
+            position: relative;
+            overflow: hidden;
+            padding: 20px;
+            padding-top: 40vh;
+        }
+
+        /* Schimmernde Punkte im Hintergrund */
+        .start::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(#2e2e40 1px, transparent 1px);
+            background-size: 30px 30px;
+            animation: leuchten 8s ease-in-out infinite;
+            opacity: 0.4;
+        }
+        @keyframes leuchten {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Titel */
+        .start h1 {
+            font-size: clamp(4.5rem, 18vw, 9rem);
+            font-weight: 700;
+            letter-spacing: 6px;
+            color: #ffffff;
+            margin-bottom: 1.2rem;
+            z-index: 1;
+            animation: einblenden 1.2s ease-out;
+        }
+        @keyframes einblenden {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Beschreibung */
+        .start .slogan {
+            font-size: 1.5rem;
+            color: #c0c0e0;
+            margin-bottom: 1rem;
+            z-index: 1;
+            animation: einblenden 1.5s ease-out;
+        }
+        .start .text {
+            font-size: 1.15rem;
+            color: #a0a0c0;
+            max-width: 600px;
+            margin-bottom: 80vh; /* Extrem viel Abstand nach unten */
+            z-index: 1;
+            animation: einblenden 1.8s ease-out;
+        }
+
+        /* YouTube Bereich – ganz am unteren Ende */
+        .yt-box {
+            z-index: 1;
+            animation: einblenden 2.1s ease-out;
+            background: #181825;
+            padding: 1.5rem 2.5rem;
+            border-radius: 10px;
+            border: 1px solid #2a2a3a;
+            margin-bottom: 5rem;
+        }
+        .yt-box h3 {
+            color: #ff4444;
+            margin-bottom: 0.8rem;
+            font-size: 1.4rem;
+        }
+        .yt-box p {
+            color: #b0b0c5;
+            font-size: 1.05rem;
+        }
+
+        /* Symbole */
+        .symbole {
+            display: flex;
+            gap: 2.5rem;
+            z-index: 1;
+            animation: einblenden 2.4s ease-out;
+        }
+        .symbol {
+            font-size: 2.3rem;
+            color: #b0b0e0;
+            opacity: 0.75;
+            transition: 0.2s;
+        }
+        .symbol:hover {
+            opacity: 1;
+            transform: scale(1.12);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="ueber.html">Über mich</a>
+        <a href="discord.html">Discord</a>
+    </nav>
+
+    <div class="start">
+        <h1>Reso</h1>
+        <p class="slogan">Mods installieren leicht gemacht</p>
+        <p class="text">Ich zeige dir Schritt für Schritt, wie du Mods sicher herunterlädst und installierst – bald auch mit Videos auf meinem YouTube-Kanal!</p>
+
+        <!-- Jetzt erst nach sehr langem Scrollen sichtbar -->
+        <div class="yt-box">
+            <h3>📺 Mein YouTube-Kanal</h3>
+            <p>Kommt bald – dort findest du alle Anleitungen als Video!</p>
+        </div>
+
+        <div class="symbole">
+            <div class="symbol">🎮</div>
+            <div class="symbol">📥</div>
+            <div class="symbol">📹</div>
+        </div>
+    </div>
+</body>
+</html>
